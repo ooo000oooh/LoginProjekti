@@ -47,15 +47,15 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="24,10,0,-10">
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="119,248,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="277"/>
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="119,337,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="262"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="119,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="119,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="28">
-            	<Run Text="{Binding Path=LocalizedResources.Login, Source={StaticResource LocalizedStrings}}"/>
+            	<Run Text="{Binding Path=LocalizedResources.Username, Source={StaticResource LocalizedStrings}}"/>
             	<Run Text=":"/>
             </TextBlock>
             <TextBlock HorizontalAlignment="Left" Margin="10,362,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Password, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
-            <Button Content="Kirjaudu sisään" HorizontalAlignment="Left" Margin="204,435,0,0" VerticalAlignment="Top" Width="213"/>
-            <CheckBox Content="Käytä outlook Weblightia" HorizontalAlignment="Left" Margin="119,160,0,0" VerticalAlignment="Top" Width="327" Height="83"/>
+            <Button Content="{Binding Path=LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="204,435,0,0" VerticalAlignment="Top" Width="213"/>
+            <CheckBox Content="{Binding Path=LocalizedResources.Use_outlook_weblight, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,160,0,0" VerticalAlignment="Top" Width="327" Height="83"/>
 
         </Grid>
 
