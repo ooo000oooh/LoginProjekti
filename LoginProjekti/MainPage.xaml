@@ -54,7 +54,7 @@
             	<Run Text=":"/>
             </TextBlock>
             <TextBlock HorizontalAlignment="Left" Margin="10,362,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Password, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
-            <Button Content="{Binding Path=LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="204,435,0,0" VerticalAlignment="Top" Width="213"/>
+            <Button Content="{Binding Path=LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="204,435,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click"/>
             <CheckBox Content="{Binding Path=LocalizedResources.Use_outlook_weblight, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,160,0,0" VerticalAlignment="Top" Width="327" Height="83"/>
 
         </Grid>
