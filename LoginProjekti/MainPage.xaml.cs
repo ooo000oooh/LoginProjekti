@@ -18,14 +18,6 @@ namespace LoginProjekti
         public MainPage()
         {
             InitializeComponent();
-
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         private void BackButton_Clicked(object sender, RoutedEventArgs e)
@@ -34,9 +26,23 @@ namespace LoginProjekti
             toggleLoginPanelOn();
         }
 
+        private void Checbox_Clicked(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Checkbox pressed");
+            if(this.Use_outlook_weblight_instructions.Visibility==Visibility.Collapsed){
+                this.Use_outlook_weblight_instructions.Visibility=Visibility.Visible;
+            }
+            else
+            {
+                this.Use_outlook_weblight_instructions.Visibility = Visibility.Collapsed;
+            }
+            
+        }
+
         //Toggles private/public computer information visibility based on clicked radioButton
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
+            
             RadioButton rb = (RadioButton)sender;
             if (rb.Name.Equals("PublicComputerRadioButton"))
             {
@@ -47,9 +53,7 @@ namespace LoginProjekti
             {
                 System.Diagnostics.Debug.WriteLine("private computer radiobutton checked");
                 this.PrivateComputerInstructionsText.Visibility = Visibility.Visible;
-            }
-           
-           
+            }           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -80,28 +84,5 @@ namespace LoginProjekti
             this.ContentPanel.Visibility = Visibility.Visible;
             this.LoggedInPanel.Visibility = Visibility.Collapsed;
         }
-
-        private void PublicComputerRadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-    
-
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
-
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
-
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
     }
 }

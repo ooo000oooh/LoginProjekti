@@ -156,8 +156,8 @@
   <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="Use_outlook_weblight_instructions" xml:space="preserve">
+    <value>instructions lorem ipsum</value>
   </data>
   <data name="WelcomeText" xml:space="preserve">
     <value>Welcome, you have succesfully logged to mail!</value>

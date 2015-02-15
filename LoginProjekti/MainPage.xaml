@@ -52,22 +52,22 @@
 
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Width="auto" Height="auto" Margin="24,10,0,-10" Visibility="Visible">
-            <RadioButton x:Name="PublicComputerRadioButton" Content="{Binding LocalizedResources.Public_computer, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,10,0,0" VerticalAlignment="Top" Height="71" Checked="RadioButton_Checked"/>
-            <RadioButton x:Name="PrivateComputerRadioButton" Content="{Binding LocalizedResources.Private_computer, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,67,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"  />
-            <TextBlock x:Name="PrivateComputerInstructionsText" Foreground="Yellow" Visibility="Visible" TextWrapping="Wrap" Text="{Binding LocalizedResources.Private_computer_instructions, Source={StaticResource LocalizedStrings}}" Width="auto" Height="auto" Margin="175,136,37,529" >
-				
-            </TextBlock>
-            <CheckBox x:Name="WebLightCheckbox" HorizontalAlignment="Left" Margin="119,160,0,0" VerticalAlignment="Top" Width="327" Height="83"/>
-            <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="72" Margin="119,248,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
-            <TextBox x:Name="passwordTextBox" HorizontalAlignment="Left" Height="72" Margin="119,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="28">
+        <Grid x:Name="ContentPanel" Width="auto" Height="auto" Margin="14,10,10,-10" Visibility="Visible" Grid.Row="1">
+            <RadioButton x:Name="PublicComputerRadioButton" Grid.Row="2"  Content="{Binding LocalizedResources.Public_computer,  Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,10,0,0" VerticalAlignment="Top" Width="auto" Height="auto"  Checked="RadioButton_Checked"/>
+            <RadioButton x:Name="PrivateComputerRadioButton" Grid.Row="3" Content="{Binding LocalizedResources.Private_computer, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,67,0,0" VerticalAlignment="Top" Width="auto" Height="auto"  Checked="RadioButton_Checked"  />
+            <TextBlock x:Name="PrivateComputerInstructionsText" Grid.Row="4" Foreground="Yellow" Visibility="Collapsed" TextWrapping="Wrap" Text="{Binding LocalizedResources.Private_computer_instructions, Source={StaticResource LocalizedStrings}}" Width="auto" Height="auto" Margin="175,136,37,466" />
+            <CheckBox x:Name="WebLightCheckbox" Width="auto" Height="auto" Content="{Binding LocalizedResources.Use_outlook_weblight, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="136,230,0,0" VerticalAlignment="Top" Click="Checbox_Clicked" />
+            <TextBlock Name="Use_outlook_weblight_instructions"  HorizontalAlignment="Left" Margin="175,300,0,0" TextWrapping="Wrap" Visibility="Collapsed" Text="{Binding LocalizedResources.Use_outlook_weblight_instructions, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="244" Height="32"/>
+            <TextBox x:Name="userNameTextBox" HorizontalAlignment="Left" Height="72" Margin="142,332,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="277" />
+            <TextBox x:Name="passwordTextBox" Grid.Row="7" HorizontalAlignment="Left" Height="72" Margin="136,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
+            <TextBlock HorizontalAlignment="Left" Grid.Row="8" Margin="27,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Height="28">
 				<Run Text="{Binding LocalizedResources.Username, Source={StaticResource LocalizedStrings}}"/>
 				<Run Text=":"/>
             </TextBlock>
-            <TextBlock x:Name="PasswordText" HorizontalAlignment="Left" Margin="10,362,0,0" TextWrapping="Wrap" Text="{Binding LocalizedResources.Password, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
-            <Button x:Name="LoginButton" Content="{Binding LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="183,469,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click"/>
-            <TextBlock x:Name="LoginFailedText" Foreground="Yellow" Visibility="Collapsed" HorizontalAlignment="Left" Margin="138,414,0,0" TextWrapping="Wrap" Text="{Binding LocalizedResources.LoginFailed, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="275" Height="55"/>
+            <TextBlock x:Name="PasswordText" Grid.Row="9" HorizontalAlignment="Left" Margin="27,446,0,0" TextWrapping="Wrap" Text="{Binding LocalizedResources.Password, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
+            <Button x:Name="LoginButton" Grid.Row="10" Content="{Binding LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="200,553,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click"/>
+            <TextBlock x:Name="LoginFailedText" Grid.Row="11" Foreground="Yellow" Visibility="Collapsed" HorizontalAlignment="Left" Margin="151,498,0,0" TextWrapping="Wrap" Text="{Binding LocalizedResources.LoginFailed, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="275" Height="31" RenderTransformOrigin="0.567,1.009"/>
+            
 
 
         </Grid>
