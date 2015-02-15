@@ -57,6 +57,8 @@
             <Button Name="LoginButton" Content="{Binding Path=LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="183,469,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click"/>
             <CheckBox Name="WebLightCheckbox" Content="{Binding Path=LocalizedResources.Use_outlook_weblight, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,160,0,0" VerticalAlignment="Top" Width="327" Height="83"/>
             <TextBlock Name="LoginFailedText" Foreground="Yellow" Visibility="Collapsed" HorizontalAlignment="Left" Margin="138,414,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.LoginFailed, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="275" Height="55"/>
+            <RadioButton Name="PublicComputerRadioButton" Content="{Binding Path=LocalizedResources.Public_computer, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,10,0,0" VerticalAlignment="Top" Height="71"/>
+            <RadioButton Name="PrivateComputerRadioButton" Content="{Binding Path=LocalizedResources.Private_computer, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,67,0,0" VerticalAlignment="Top"/>
         </Grid>
 
         <Grid x:Name="LoggedInPanel" Grid.Row="1" Margin="24,10,0,-10" Visibility="Collapsed">
