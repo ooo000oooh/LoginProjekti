@@ -34,6 +34,24 @@ namespace LoginProjekti
             toggleLoginPanelOn();
         }
 
+        //Toggles private/public computer information visibility based on clicked radioButton
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+            if (rb.Name.Equals("PublicComputerRadioButton"))
+            {
+                System.Diagnostics.Debug.WriteLine("public computer radiobutton checked");
+                this.PrivateComputerInstructionsText.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("private computer radiobutton checked");
+                this.PrivateComputerInstructionsText.Visibility = Visibility.Visible;
+            }
+           
+           
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Login pressed");
@@ -61,6 +79,11 @@ namespace LoginProjekti
         {
             this.ContentPanel.Visibility = Visibility.Visible;
             this.LoggedInPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void PublicComputerRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
 
     

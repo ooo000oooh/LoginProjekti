@@ -115,7 +115,7 @@ namespace LoginProjekti.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose this option when 2.
+        ///   Looks up a localized string similar to Warning this option lorem ipsum lorem ipsum lorem ipsum.
         /// </summary>
         public static string Private_computer_instructions {
             get {

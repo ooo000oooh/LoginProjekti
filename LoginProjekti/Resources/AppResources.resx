@@ -127,7 +127,7 @@
     <value>This is private computer</value>
   </data>
   <data name="Private_computer_instructions" xml:space="preserve">
-    <value>Choose this option when 2</value>
+    <value>Warning this option lorem ipsum lorem ipsum lorem ipsum</value>
   </data>
   <data name="Public_computer" xml:space="preserve">
     <value>This is public computer</value>
