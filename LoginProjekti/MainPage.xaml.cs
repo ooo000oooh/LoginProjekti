@@ -40,19 +40,19 @@ namespace LoginProjekti
             this.LoginFailedText.Visibility = Visibility.Collapsed;
             String userNameTrimmed = userNameTextBox.Text.Trim();
             String passwordTrimmed = passwordTextBox.Text.Trim();
-            if (userNameTrimmed.Equals("")||passwordTrimmed.Equals(""))
+            if (userNameTrimmed.Equals("") || passwordTrimmed.Equals(""))
             {
-                System.Diagnostics.Debug.WriteLine("Login failed. usrname was:"+userNameTrimmed);
-                showInvalidLoginMessage();
+                System.Diagnostics.Debug.WriteLine("Login failed. usrname was:" + userNameTrimmed);
+                this.LoginFailedText.Visibility = Visibility.Visible;
                 return;
             }
-            toggleLoggedPanelOn();
+            toggleLoggedInPanelOn();
             System.Diagnostics.Debug.WriteLine(userNameTextBox.Text);
         }
 
-        private void toggleLoggedPanelOn()
+        private void toggleLoggedInPanelOn()
         {
-            System.Diagnostics.Debug.WriteLine("Toggling logged panel on");
+            System.Diagnostics.Debug.WriteLine("Toggling logged in panel on");
             this.LoggedInPanel.Visibility = Visibility.Visible;
             this.ContentPanel.Visibility = Visibility.Collapsed;
         }
@@ -63,11 +63,7 @@ namespace LoginProjekti
             this.LoggedInPanel.Visibility = Visibility.Collapsed;
         }
 
-        private void showInvalidLoginMessage()
-        {
-            this.ContentPanel.Visibility = Visibility.Collapsed;
-            this.LoginFailedText.Visibility = Visibility.Visible;
-        }
+    
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()

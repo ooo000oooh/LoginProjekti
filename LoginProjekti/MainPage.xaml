@@ -60,7 +60,7 @@
         </Grid>
 
         <Grid x:Name="LoggedInPanel" Grid.Row="1" Margin="24,10,0,-10" Visibility="Collapsed">
-            <TextBlock Name="WelcomeText" Foreground="Yellow" Visibility="Collapsed" HorizontalAlignment="Left" Margin="138,414,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.LoginFailed, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="275" Height="55"/>
+            <TextBlock Name="WelcomeText" Foreground="Green"   HorizontalAlignment="Left" Margin="138,414,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.WelcomeText, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="275" Height="90"/>
             <Button Name="BackButton" Content="{Binding Path=LocalizedResources.Back, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="183,469,0,0" VerticalAlignment="Top" Width="213" Click="BackButton_Clicked"/>
         </Grid>
 
