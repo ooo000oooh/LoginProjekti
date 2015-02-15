@@ -10,10 +10,13 @@ using Microsoft.Phone.Shell;
 using LoginProjekti.Resources;
 
 namespace LoginProjekti
-{
+{ 
+    /*
+   * Handles code behind logic of MainPage.xaml
+   */
     public partial class MainPage : PhoneApplicationPage
     {
-        private Boolean loginFailed;
+        
         // Constructor
         public MainPage()
         {
