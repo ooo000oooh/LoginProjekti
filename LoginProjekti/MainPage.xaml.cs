@@ -13,6 +13,7 @@ namespace LoginProjekti
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private Boolean loginFailed;
         // Constructor
         public MainPage()
         {
@@ -27,9 +28,45 @@ namespace LoginProjekti
 
         }
 
+        private void BackButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Back pressed");
+            toggleLoginPanelOn();
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("GO BUTTON HAS BEEN CLICKED");
+            System.Diagnostics.Debug.WriteLine("Login pressed");
+            this.LoginFailedText.Visibility = Visibility.Collapsed;
+            String userNameTrimmed = userNameTextBox.Text.Trim();
+            String passwordTrimmed = passwordTextBox.Text.Trim();
+            if (userNameTrimmed.Equals("")||passwordTrimmed.Equals(""))
+            {
+                System.Diagnostics.Debug.WriteLine("Login failed. usrname was:"+userNameTrimmed);
+                showInvalidLoginMessage();
+                return;
+            }
+            toggleLoggedPanelOn();
+            System.Diagnostics.Debug.WriteLine(userNameTextBox.Text);
+        }
+
+        private void toggleLoggedPanelOn()
+        {
+            System.Diagnostics.Debug.WriteLine("Toggling logged panel on");
+            this.LoggedInPanel.Visibility = Visibility.Visible;
+            this.ContentPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void toggleLoginPanelOn()
+        {
+            this.ContentPanel.Visibility = Visibility.Visible;
+            this.LoggedInPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void showInvalidLoginMessage()
+        {
+            this.ContentPanel.Visibility = Visibility.Collapsed;
+            this.LoginFailedText.Visibility = Visibility.Visible;
         }
 
         // Sample code for building a localized ApplicationBar

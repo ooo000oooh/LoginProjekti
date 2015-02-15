@@ -150,4 +150,13 @@
   <data name="ResourceLanguage" xml:space="preserve">
     <value>en-US</value>
   </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Login failed, check credentials</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="WelcomeText" xml:space="preserve">
+    <value>Welcome, you have succesfully logged to mail!</value>
+  </data>
 </root>

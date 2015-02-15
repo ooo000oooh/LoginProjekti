@@ -42,21 +42,26 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="24,10,-12,35">
             <TextBlock Text="{Binding LocalizedResources.Application_name, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-           
+
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="24,10,0,-10">
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="119,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="119,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="24,10,0,-10" Visibility="Visible">
+            <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Height="72" Margin="119,248,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+            <TextBox Name="passwordTextBox" HorizontalAlignment="Left" Height="72" Margin="119,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="28">
             	<Run Text="{Binding Path=LocalizedResources.Username, Source={StaticResource LocalizedStrings}}"/>
             	<Run Text=":"/>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="10,362,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Password, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
-            <Button Content="{Binding Path=LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="204,435,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click"/>
-            <CheckBox Content="{Binding Path=LocalizedResources.Use_outlook_weblight, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,160,0,0" VerticalAlignment="Top" Width="327" Height="83"/>
+            <TextBlock Name="PasswordText" HorizontalAlignment="Left" Margin="10,362,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Password, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
+            <Button Name="LoginButton" Content="{Binding Path=LocalizedResources.Login, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="183,469,0,0" VerticalAlignment="Top" Width="213" Click="Button_Click"/>
+            <CheckBox Name="WebLightCheckbox" Content="{Binding Path=LocalizedResources.Use_outlook_weblight, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="119,160,0,0" VerticalAlignment="Top" Width="327" Height="83"/>
+            <TextBlock Name="LoginFailedText" Foreground="Yellow" Visibility="Collapsed" HorizontalAlignment="Left" Margin="138,414,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.LoginFailed, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="275" Height="55"/>
+        </Grid>
 
+        <Grid x:Name="LoggedInPanel" Grid.Row="1" Margin="24,10,0,-10" Visibility="Collapsed">
+            <TextBlock Name="WelcomeText" Foreground="Yellow" Visibility="Collapsed" HorizontalAlignment="Left" Margin="138,414,0,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.LoginFailed, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="275" Height="55"/>
+            <Button Name="BackButton" Content="{Binding Path=LocalizedResources.Back, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="183,469,0,0" VerticalAlignment="Top" Width="213" Click="BackButton_Clicked"/>
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
